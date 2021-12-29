@@ -28,7 +28,7 @@ public class loadDataToDb extends sqlBaseHelper {
                 " avatar VARCHAR(255), " +
                 " page VARCHAR(255)," +
                 " PRIMARY KEY (id))";
-
+        System.out.println("Create Statement is "+sql);
         Statement stmt = conn.createStatement();
 
         try{

@@ -21,7 +21,7 @@ public class restGetHelper extends restBaseHelper {
                 .get("https://reqres.in/api/users/"+id)
                 .then()
                 .extract().response();
-        System.out.println(response.asString());
+//        System.out.println(response.asString());
 //        Map<Object, Object> restResponseMap = response.jsonPath().getMap("data");
         Map<Object, Object> restResponseMap = response.jsonPath().getMap(node);
         System.out.println(restResponseMap);
@@ -35,7 +35,7 @@ public class restGetHelper extends restBaseHelper {
                 .get("https://reqres.in/api/users?page="+pageNumber)
                 .then()
                 .extract().response();
-        System.out.println(response.asString());
+//        System.out.println(response.asString());
         JsonPath jp = new JsonPath(response.asString());
         List<Map> dataValues = jp.getList("data");
         System.out.println(dataValues);
